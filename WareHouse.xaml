@@ -1,0 +1,18 @@
+﻿<Page x:Class="RestaurantManagementSystem.WareHouse"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RestaurantManagementSystem"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="700"
+      Title="WareHouse">
+
+    <Grid Margin="0,0,400,400">
+        <TextBlock Text="KHO"
+                   Foreground="#4F6B9F"
+                   FontFamily="Comfortaa Light"
+                   FontSize="20"
+                   Padding="15"/>
+    </Grid>
+</Page>

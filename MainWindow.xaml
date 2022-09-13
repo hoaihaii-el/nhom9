@@ -1,0 +1,304 @@
+﻿<Window x:Class="RestaurantManagementSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestaurantManagementSystem"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="500" 
+        Width="900"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Background="Transparent">
+    
+    <Grid Name="root">
+
+        <Border Background="White"
+                CornerRadius="20"
+                BorderThickness="4"
+                BorderBrush="#4F6B9F"/>
+
+        <!--Tên App-->
+        
+        <Grid Margin="550,0,0,450">
+            <Border Background="Transparent"
+                    CornerRadius="0,20,0,20"
+                    BorderThickness="4"
+                    BorderBrush="#4F6B9F"/>
+            <TextBlock Margin="50,15,75,0"
+                       FontFamily="Comfortaa Light"
+                       FontSize="20"
+                       Foreground="#4F6B9F">
+                QUẢN LÝ NHÀ HÀNG
+            </TextBlock>
+        </Grid>
+        
+        <!--NÚT CLOSE-->
+
+        <Button Panel.ZIndex="5" 
+                BorderBrush="Transparent" 
+                Click="btnClose_Click" 
+                Margin="850,3,3,454" 
+                Cursor="Hand"
+                Background="Transparent">
+            <Image Source="E:\HK3\LTTQ\BlueIcons\power_button_50px.png"/>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="0,20,0,20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!--SIDE BAR-->
+        
+        <Grid Margin="0,0,700,0"
+              Name="gridSideBar">
+
+            <Border Background="#4F6B9F"
+                    CornerRadius="20,0,0,20"/>
+            
+            <!--Avatar-->
+            
+            <Button x:Name="btnViewProfile" 
+                    Margin="10,20,130,420"
+                    BorderThickness="3"
+                    Cursor="Hand"
+                    ToolTip="Xem hồ sơ"
+                    BorderBrush="White" 
+                    Click="btnViewProfile_Click">
+                <Image Source="E:\HK3\LTTQ\avt.jpg"
+                       Stretch="Uniform"/>
+            </Button>
+
+            <!--TÊN NHÂN VIÊN-->
+            
+            <TextBlock Margin="80,30,25,445"
+                       FontFamily="Comfortaa Light"
+                       Foreground="White"
+                       FontSize="14">
+                Hoài Hải
+            </TextBlock>
+
+            <!--CHỨC VỤ-->            
+
+            <TextBlock Margin="80,60,25,415"
+                       FontFamily="Comfortaa Light"
+                       Foreground="White"
+                       FontSize="14">
+                Quản Lý
+            </TextBlock>
+
+            <!--KHO-->
+
+            <Button Margin="5,100,5,350" 
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Name="btnWareHouse" 
+                    Click="btnWareHouse_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+                
+                <Grid Margin="0, 0, 0, 0" 
+                      Height="50" 
+                      Width="200">
+                    <Image Source="E:\HK3\LTTQ\Winform\Icons\kho_50px.png"
+                               Margin="5,0,150,0"/>
+                    <TextBlock Foreground="White" 
+                               Height="35" 
+                               Width="150" 
+                               Margin="50,15,0,5"
+                               FontFamily="Comfortaa Light"
+                               FontSize="16"
+                               TextWrapping="Wrap"
+                               Text=" Kho"/>
+                </Grid>
+            </Button>
+
+            <!--NHÂN VIÊN-->
+
+            <Button Margin="5,150,5,300" 
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Name="btnStaff" 
+                    Click="btnStaff_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+                <Grid Margin="0, 0, 0, 0" 
+                      Height="50" 
+                      Width="200">
+                    <Image Source="E:\HK3\LTTQ\Winform\Icons\nhanvien_50px.png"
+                               Margin="5,0,150,0"/>
+                    <TextBlock Foreground="White" 
+                               Height="35" 
+                               Width="150" 
+                               Margin="50,15,0,5"
+                               FontFamily="Comfortaa Light"
+                               FontSize="16"
+                               TextWrapping="Wrap"
+                               Text=" Nhân viên"/>                      
+                </Grid>
+            </Button>
+
+            <!--MENU-->
+
+            <Button Margin="5,200,5,250"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Name="btnMenu" 
+                    Click="btnMenu_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+                <Grid Margin="0, 0, 0, 0" 
+                      Height="50" 
+                      Width="200">
+                    <Image Source="E:\HK3\LTTQ\Winform\Icons\restaurant_menu_50px.png"
+                           Margin="5,0,150,0"/>
+                    <TextBlock Foreground="White" 
+                               Height="35" 
+                               Width="150" 
+                               Margin="50,15,0,5"
+                               FontFamily="Comfortaa Light"
+                               FontSize="16"
+                               TextWrapping="Wrap"
+                               Text=" Menu"/>
+                </Grid>
+            </Button>
+
+            <!--BÀN-->
+
+            <Button Margin="5,250,5,200" 
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Name="btnTable" 
+                    Click="btnTable_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+                <Grid Margin="0, 0, 0, 0" 
+                      Height="50" 
+                      Width="200">
+                    <Image Source="E:\HK3\LTTQ\Winform\Icons\table_50px.png"
+                               Margin="5,0,150,0"/>
+                    <TextBlock Foreground="White" 
+                               Height="35" 
+                               Width="150" 
+                               Margin="50,15,0,5"
+                               FontFamily="Comfortaa Light"
+                               FontSize="16"
+                               TextWrapping="Wrap"
+                               Text=" Tình trạng bàn"/>
+                </Grid>
+            </Button>
+
+            <!--LỊCH SỬ-->
+
+            <Button Margin="5,300,5,150" 
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Name="btnBill" 
+                    Click="btnBill_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+                <Grid Margin="0, 0, 0, 0" 
+                      Height="50" 
+                      Width="200">
+                    <Image Source="E:\HK3\LTTQ\Winform\Icons\history_50px.png"
+                               Margin="5,0,150,0"/>
+                    <TextBlock Foreground="White" 
+                               Height="35" 
+                               Width="150" 
+                               Margin="50,15,0,5"
+                               FontFamily="Comfortaa Light"
+                               FontSize="16"
+                               TextWrapping="Wrap"
+                               Text=" Lịch sử bàn"/>
+                </Grid>
+            </Button>
+
+            <!--THỐNG KÊ-->
+
+            <Button Margin="5,350,5,100" 
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Name="btnStats" 
+                    Click="btnStats_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+                <Grid Margin="0, 0, 0, 0" 
+                      Height="50" 
+                      Width="200">
+                    <Image Source="E:\HK3\LTTQ\Winform\Icons\chart_50px.png"
+                           Margin="5,0,150,0"/>
+                    <TextBlock Foreground="White" 
+                               Height="35" 
+                               Width="150" 
+                               Margin="50,15,0,5"
+                               FontFamily="Comfortaa Light"
+                               FontSize="16"
+                               TextWrapping="Wrap"
+                               Text=" Thống kê"/>
+                </Grid>
+            </Button>
+
+            <!--LOG OUT-->
+
+            <Button Margin="5,445,5,5" 
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Name="btnLogOut">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+                <Grid Margin="0, 0, 0, 0" 
+                      Height="50" 
+                      Width="200">
+                    <Image Source="E:\HK3\LTTQ\Winform\Icons\logout_50px.png"
+                           Margin="5,0,150,0"/>
+                    <TextBlock Foreground="White" 
+                               Height="35" 
+                               Width="150" 
+                               Margin="50,15,0,5"
+                               FontFamily="Comfortaa Light"
+                               FontSize="16"
+                               TextWrapping="Wrap"
+                               Text=" Đăng xuất"/>
+                </Grid>
+            </Button>
+        </Grid>
+        
+       <!--Content-->
+
+        <Frame x:Name="MainMenu" 
+               Margin="200,0,0,0"
+               NavigationUIVisibility="Hidden"/>
+        
+    </Grid>
+</Window>
